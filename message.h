@@ -22,7 +22,6 @@ struct Message{
 	Date date;
 	Time time;
 	std::string message;
-	bool dayExists(const Message);
 	bool compare_dates(const Message &_lmessage);
 }
 
@@ -30,6 +29,7 @@ struct Diary{
 	std::list<Message> messages;
 	std::fstream file;
 	std::string name;
+	bool dayExists(const Message message;);
 	bool diaryExist(); 
 }
 
