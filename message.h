@@ -2,27 +2,22 @@
 #define MESSAGE.H
 
 #include <string.h>
-
-struct Date{
-	int day;
-	int month;
-	int year;
-}
-
-struct Time
-{
-	int hour;
-	int minute;
-	int seconds;
-};
+#include <list>
 
 struct Message{
-	Date date;
-	Time time;
-	std::string message;
+	std::string m_date;
+	std::string m_time;
+	std::string m_message;
+	bool dayExists(const Message);
+	bool compare_dates(const Message &_lmessage);
 }
 
-
+struct Diary{
+	std::list<Message> m_messages;
+	std::fstream m_file;
+	std::string m_name;
+	bool diaryExist(); 
+}
 
 
 #endif
