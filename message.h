@@ -8,7 +8,7 @@ struct Message{
 	std::string m_date;
 	std::string m_time;
 	std::string m_message;
-	bool dayExists(const Message);
+	bool dayExists();
 	bool compare_dates(const Message &_lmessage);
 }
 
